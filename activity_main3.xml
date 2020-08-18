@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+    <TextView
+        android:id="@+id/textViewLiquidYeast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Liquid Yeast:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewDryYeast"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDryYeast" />
+
+    <Button
+        android:id="@+id/Tab1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0091EA"
+        android:onClick="OnClick"
+        android:text="@string/recipe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".33" />
+
+    <Button
+        android:id="@+id/Tab2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00BFA5"
+        android:text="@string/yeast"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Tab3"
+        app:layout_constraintStart_toEndOf="@+id/Tab1" />
+
+    <Button
+        android:id="@+id/Tab3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0091EA"
+        android:onClick="OnClick"
+        android:text="@string/fermentation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent=".33" />
+
+    <TextView
+        android:id="@+id/textViewDryYeast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Dry Yeast:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculateYeast" />
+
+    <TextView
+        android:id="@+id/textViewHarvestedYeast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Harvested Yeast:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/textViewDryYeast"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLiquidYeast" />
+
+    <TextView
+        android:id="@+id/textViewBatchSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="Litres:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextNumberOG"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumberOG"
+        app:layout_constraintTop_toTopOf="@+id/editTextNumberOG" />
+
+    <TextView
+        android:id="@+id/txtViewViability"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Viability (%):"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewYeastCells" />
+
+    <TextView
+        android:id="@+id/textViewOG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/og"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCalculateYeast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="OnClick"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViability" />
+
+    <Button
+        android:id="@+id/buttonCalculateCell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="OnClick"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberOG" />
+
+    <TextView
+        android:id="@+id/textViewYeastCells"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculateCell" />
+
+    <EditText
+        android:id="@+id/editTextNumberOG"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewOG"
+        app:layout_constraintStart_toEndOf="@+id/textViewOG"
+        app:layout_constraintTop_toTopOf="@+id/textViewOG" />
+
+    <EditText
+        android:id="@+id/editTextBatchSize"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="20"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewBatchSize"
+        app:layout_constraintStart_toEndOf="@+id/textViewBatchSize"
+        app:layout_constraintTop_toTopOf="@+id/textViewBatchSize" />
+
+    <EditText
+        android:id="@+id/editTextViability"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="100"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewViability"
+        app:layout_constraintStart_toEndOf="@+id/txtViewViability"
+        app:layout_constraintTop_toTopOf="@+id/txtViewViability" />
+
+    <TextView
+        android:id="@+id/txtViewViabilityDays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Days:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewViability"
+        app:layout_constraintStart_toEndOf="@+id/editTextViability"
+        app:layout_constraintTop_toTopOf="@+id/txtViewViability" />
+
+    <EditText
+        android:id="@+id/editTextViabilityDays"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="0"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewViability"
+        app:layout_constraintStart_toEndOf="@+id/txtViewViabilityDays"
+        app:layout_constraintTop_toTopOf="@+id/txtViewViability" />
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

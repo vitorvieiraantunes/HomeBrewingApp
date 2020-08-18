@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewFermTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Beer Temperature (C°):"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculate" />
+
+    <TextView
+        android:id="@+id/textViewCO2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Volumes of CO2:"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFermTemp"
+        app:layout_constraintStart_toStartOf="@+id/textViewFermTemp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFermTemp" />
+
+    <TextView
+        android:id="@+id/textViewBatchSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Bach Size (L):"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textViewFermTemp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCO2" />
+
+    <TextView
+        android:id="@+id/txtViewFG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="92dp"
+        android:text="FG:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewOG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/og"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:onClick="OnClick"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonCalculateCarb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="OnClick"
+        android:text="Calculate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewBatchSize" />
+
+    <TextView
+        android:id="@+id/textViewABV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewOG"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumberOG"
+        app:layout_constraintTop_toTopOf="@+id/textViewOG" />
+
+    <TextView
+        android:id="@+id/textViewAtten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewRecName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumberFG"
+        app:layout_constraintTop_toTopOf="@+id/txtViewFG" />
+
+    <TextView
+        android:id="@+id/textViewCarbo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCalculateCarb" />
+
+    <EditText
+        android:id="@+id/editTextNumberOG"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewOG"
+        app:layout_constraintStart_toEndOf="@+id/textViewOG"
+        app:layout_constraintTop_toTopOf="@+id/textViewOG" />
+
+    <EditText
+        android:id="@+id/editTextNumberFermTemp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="20"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewFermTemp"
+        app:layout_constraintStart_toEndOf="@+id/textViewFermTemp"
+        app:layout_constraintTop_toTopOf="@+id/textViewFermTemp" />
+
+    <EditText
+        android:id="@+id/editTextNumberCO2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="2.2"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewCO2"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberFermTemp"
+        app:layout_constraintTop_toTopOf="@+id/textViewCO2" />
+
+    <EditText
+        android:id="@+id/editTextBatchSize"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="20"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewBatchSize"
+        app:layout_constraintStart_toStartOf="@+id/editTextNumberFermTemp"
+        app:layout_constraintTop_toTopOf="@+id/textViewBatchSize" />
+
+    <EditText
+        android:id="@+id/editTextNumberFG"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtViewFG"
+        app:layout_constraintStart_toEndOf="@+id/txtViewFG"
+        app:layout_constraintTop_toTopOf="@+id/txtViewFG" />
+
+    <Button
+        android:id="@+id/Tab1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0091EA"
+        android:onClick="OnClick"
+        android:text="@string/recipe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".33" />
+
+    <Button
+        android:id="@+id/Tab2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00BFA5"
+        android:text="@string/fermentation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Tab3"
+        app:layout_constraintStart_toEndOf="@+id/Tab1" />
+
+    <Button
+        android:id="@+id/Tab3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0091EA"
+        android:onClick="OnClick"
+        android:text="@string/yeast"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent=".33" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCarbo">
+
+        <TableLayout
+            android:id="@+id/tableStyles"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="0dp"
+            android:layout_marginVertical="0dp"
+            android:background="#f1f1f1">
+
+
+            -
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/maltTableTxtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="Style"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Volumes of CO2"
+                    android:textStyle="bold" />
+
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <ScrollView
+        android:id="@+id/scrollall"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/buttonRecClearHop"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:onClick="OnClick"
+                android:text="Clear"
+                app:layout_constraintBottom_toTopOf="@+id/buttonRecSave"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/scrollViewGrains"
+                app:layout_constraintTop_toBottomOf="@+id/buttonRecAddHop" />
+
+            <Button
+                android:id="@+id/buttonRecClearGrain"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:onClick="OnClick"
+                android:text="Clear"
+                app:layout_constraintBottom_toTopOf="@+id/buttonRecAddHop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/scrollViewGrains"
+                app:layout_constraintTop_toBottomOf="@+id/buttonRecAddGrain" />
+
+            <TextView
+                android:id="@+id/txtViewRecHopMin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="min:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/edTxtNumbRecHopG"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecHops" />
+
+            <EditText
+                android:id="@+id/edTxtRecgrain"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="eg Vienna"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecGrains"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecGrains"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecGrains" />
+
+            <EditText
+                android:id="@+id/edTxtRecHop"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="eg. Citra"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecHops"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecHops"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecHops" />
+
+            <EditText
+                android:id="@+id/edTxtNumbRecABV"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecABV"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecABV"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecABV" />
+
+            <EditText
+                android:id="@+id/edTxtNumbRecOG"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecOG2"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecOG2"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecOG2" />
+
+            <EditText
+                android:id="@+id/edTxtNumbRecFG"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecFG"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecFG"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecFG" />
+
+            <EditText
+                android:id="@+id/edTxtNumbRecGrainKg"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecGrainKg"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecGrainKg"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecGrainKg" />
+
+            <EditText
+                android:id="@+id/edTxtNumbRecHopAA"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecHopAA"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecHopAA"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecHopAA" />
+
+            <EditText
+                android:id="@+id/edTxtNumbRecGrainColor"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecGrainL"
+                app:layout_constraintStart_toStartOf="@+id/edTxtNumbRecABV"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecGrainL" />
+
+            <EditText
+                android:id="@+id/edTxtNumbRecHopG"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecHopG"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecHopG"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecHopG" />
+
+            <EditText
+                android:id="@+id/edTxtNumbRecHopMin"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecHopMin"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecHopMin"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecHopMin" />
+
+            <EditText
+                android:id="@+id/edTxtNumbRecPBSG"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecPBSG"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecPBSG"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecPBSG" />
+
+            <EditText
+                android:id="@+id/edTxtNumbRecIBU"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:ems="10"
+                android:hint="0"
+                android:inputType="numberDecimal"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecIBU"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecIBU"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecIBU" />
+
+            <TextView
+                android:id="@+id/txtViewRecYeast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Yeast:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollView4" />
+
+            <TextView
+                android:id="@+id/txtViewRecHops"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Hops:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/scrollViewGrains" />
+
+            <TextView
+                android:id="@+id/txtViewRecGrains"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="26dp"
+                android:text="Grain:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewRecIBU" />
+
+            <TextView
+                android:id="@+id/txtViewRecGrainKg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Kg:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/edTxtRecgrain"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecGrains" />
+
+            <TextView
+                android:id="@+id/txtViewRecHopAA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="A/A:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/edTxtRecHop"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecHops" />
+
+            <TextView
+                android:id="@+id/txtViewRecGrainL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="L°:"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@+id/edTxtNumbRecGrainColor"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecGrains" />
+
+            <TextView
+                android:id="@+id/txtViewRecHopG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="g:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/edTxtNumbRecHopAA"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecHops" />
+
+            <TextView
+                android:id="@+id/txtViewRecABV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="ABV:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/buttonRecIBUCalc"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecIBU" />
+
+            <TextView
+                android:id="@+id/txtViewRecIBU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="IBU:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewRecOG2" />
+
+            <TextView
+                android:id="@+id/txtViewRecOG2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="OG:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtViewRecStyle" />
+
+            <TextView
+                android:id="@+id/txtViewRecFG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="FG:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/edTxtNumbRecOG"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecOG2" />
+
+            <TextView
+                android:id="@+id/txtViewRecPBSG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Pre-Boil SG:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/edTxtNumbRecFG"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecOG2" />
+
+            <EditText
+                android:id="@+id/edTxtRecStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:ems="10"
+                android:hint="eg India Pale Ale"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/edTxtRecName"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecStyle" />
+
+            <TextView
+                android:id="@+id/txtViewRecStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Style:"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+            <EditText
+                android:id="@+id/edTxtRecName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:ems="10"
+                android:hint="eg. John's  IPA"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            <EditText
+                android:id="@+id/edTxtRecYeast"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:ems="10"
+                android:hint="eg. US 05"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecYeast"
+                app:layout_constraintStart_toEndOf="@+id/txtViewRecYeast"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecYeast" />
+
+            <ScrollView
+                android:id="@+id/scrollViewGrains"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edTxtRecgrain">
+
+                -
+
+                <TableLayout
+                    android:id="@+id/tableMalt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="0dp"
+                    android:layout_marginVertical="0dp"
+                    android:background="#f1f1f1">
+
+
+                    -
+
+                    <TableRow>
+
+                        <TextView
+                            android:id="@+id/maltTableTxtView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="center"
+                            android:text="Grain"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Kg"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="L°"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                </TableLayout>
+            </ScrollView>
+
+            <ScrollView
+                android:id="@+id/scrollView4"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="80dp"
+                android:layout_marginRight="80dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edTxtRecHop">
+
+                -
+
+                <TableLayout
+                    android:id="@+id/tableHop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="0dp"
+                    android:layout_marginVertical="0dp"
+                    android:background="#f1f1f1">
+
+
+                    -
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="center"
+                            android:text="Hop"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="A/A%"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="g"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="min"
+                            android:textStyle="bold" />
+
+                    </TableRow>
+
+                </TableLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/buttonRecAddGrain"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:onClick="OnClick"
+                android:text="Add"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecGrains"
+                app:layout_constraintEnd_toEndOf="@+id/buttonRecAddHop"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecGrains"
+                app:layout_constraintVertical_bias="0.379" />
+
+            <Button
+                android:id="@+id/buttonRecIBUCalc"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:text="Calc"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecIBU"
+                app:layout_constraintStart_toEndOf="@+id/edTxtNumbRecIBU"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecIBU" />
+
+            <Button
+                android:id="@+id/buttonRecABVCalc"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="Calc"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecIBU"
+                app:layout_constraintEnd_toEndOf="@+id/buttonRecAddGrain"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecIBU" />
+
+            <Button
+                android:id="@+id/buttonRecAddHop"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:onClick="OnClick"
+                android:text="Add"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecHops"
+                app:layout_constraintStart_toEndOf="@+id/edTxtNumbRecHopMin"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecHops" />
+
+            <Button
+                android:id="@+id/buttonRecSave"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:onClick="OnClick"
+                android:text="Save"
+                app:layout_constraintBottom_toBottomOf="@+id/txtViewRecYeast"
+                app:layout_constraintEnd_toEndOf="@+id/buttonRecAddHop"
+                app:layout_constraintTop_toTopOf="@+id/txtViewRecYeast" />
+
+            <Button
+                android:id="@+id/buttonNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:onClick="OnClick"
+                android:text="Next"
+                app:layout_constraintStart_toEndOf="@+id/buttonPrev"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonDelete"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:onClick="OnClick"
+                android:text="Del"
+                app:layout_constraintStart_toEndOf="@+id/buttonNew"
+                app:layout_constraintTop_toTopOf="@+id/buttonPrev" />
+
+            <Button
+                android:id="@+id/buttonNew"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:onClick="OnClick"
+                android:text="new"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/buttonPrev" />
+
+            <Button
+                android:id="@+id/buttonPrev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="8dp"
+                android:onClick="OnClick"
+                android:text="Previous"
+                app:layout_constraintStart_toEndOf="@+id/buttonDelete"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Name:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonNew" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/Tab1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0091EA"
+        android:onClick="OnClick"
+        android:text="@string/fermentation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".33" />
+
+    <Button
+        android:id="@+id/Tab2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00BFA5"
+        android:text="@string/recipe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Tab3"
+        app:layout_constraintStart_toEndOf="@+id/Tab1" />
+
+    <Button
+        android:id="@+id/Tab3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#0091EA"
+        android:onClick="OnClick"
+        android:text="@string/yeast"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent=".33" />
+</androidx.constraintlayout.widget.ConstraintLayout>
